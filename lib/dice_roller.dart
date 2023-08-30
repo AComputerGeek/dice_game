@@ -30,20 +30,22 @@ class _DiceRollerState extends State<DiceRoller> {
   @override
   Widget build(context) {
     return Column(
-        mainAxisAlignment:
-            MainAxisAlignment.center, // Center vertically all widgets
-        children: [
-          Image.asset(imagePath, width: 200),
-          const SizedBox(height: 20), // Space between dice image and button
-          TextButton(
-            onPressed: rollDice,
-            style: TextButton.styleFrom(
-                padding: const EdgeInsets.all(10),
-                backgroundColor: Colors.white,
-                foregroundColor: Colors.black, // Button's label color
-                textStyle: const TextStyle(fontSize: 24)),
-            child: const Text("Roll Dice"),
+      mainAxisAlignment:
+          MainAxisAlignment.center, // Center vertically all widgets
+      children: [
+        Image.asset(imagePath, width: 200),
+        const SizedBox(height: 20), // Space between dice image and button
+        TextButton(
+          onPressed: rollDice,
+          style: TextButton.styleFrom(
+            padding: const EdgeInsets.all(10),
+            backgroundColor: Colors.white,
+            foregroundColor: Colors.black, // Button's label color
+            textStyle: const TextStyle(fontSize: 24),
           ),
-        ]);
+          child: const Text("Roll Dice"),
+        ),
+      ],
+    );
   }
 }
