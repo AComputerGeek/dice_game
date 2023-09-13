@@ -2,6 +2,14 @@
 
 A new Flutter project.
 
+# Demo:
+
+
+
+https://github.com/AComputerGeek/dice_game/assets/107828537/16001c25-562c-45ce-9ff0-97608c1737b6
+
+
+
 ## Getting Started
 
 This project is a starting point for a Flutter application.
