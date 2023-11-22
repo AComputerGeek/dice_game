@@ -17,7 +17,7 @@ class DiceRoller extends StatefulWidget {
 
 // State class for a custom widget (StatefulWidget)
 class _DiceRollerState extends State<DiceRoller> {
-  var imagePath = 'assets/images/dice-1.png';
+  var imagePath = 'assets/images/dice-2.png';
 
   void rollDice() {
     var diceRoll = Random().nextInt(6) + 1; // 1 <= random number <= 6
@@ -30,18 +30,31 @@ class _DiceRollerState extends State<DiceRoller> {
   @override
   Widget build(context) {
     return Column(
+      // mainAxisSize: MainAxisSize.min,
       mainAxisAlignment:
           MainAxisAlignment.center, // Center vertically all widgets
       children: [
-        Image.asset(imagePath, width: 200),
-        const SizedBox(height: 20), // Space between dice image and button
-        TextButton(
+        Image.asset(
+          imagePath,
+          width: 180,
+        ),
+        const SizedBox(height: 60), // Space between dice image and button
+        ElevatedButton(
           onPressed: rollDice,
-          style: TextButton.styleFrom(
-            padding: const EdgeInsets.all(10),
-            backgroundColor: Colors.white,
+          style: ElevatedButton.styleFrom(
+            padding: const EdgeInsets.symmetric(
+              vertical: 15,
+              horizontal: 20,
+            ),
+            backgroundColor: const Color.fromARGB(255, 190, 255, 203),
             foregroundColor: Colors.black, // Button's label color
-            textStyle: const TextStyle(fontSize: 24),
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(10),
+            ),
+            textStyle: const TextStyle(
+              fontSize: 21,
+              fontWeight: FontWeight.w600,
+            ),
           ),
           child: const Text("Roll Dice"),
         ),

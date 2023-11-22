@@ -22,8 +22,6 @@ class GradientContainer extends StatelessWidget {
       decoration: BoxDecoration(
         gradient: LinearGradient(
           colors: [
-            // Colors.white,
-            // Colors.lightBlue,
             color1,
             color2
           ],
